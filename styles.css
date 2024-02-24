@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "HerculeanRoman";
+  src: url("assets/fonts/HerculanumStdRoman.otf") format("opentype");
+}
+* {
+  font-family: "HerculeanRoman" !important;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(3vmin);
+  background: no-repeat
+    radial-gradient(at 55% 15%, white 0%, white 10%, rgb(82, 132, 255) 100%);
+}
+#bingo-board {
+  width: 85vmin;
+  height: 85vmin;
+  background-color: peachpuff;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+  border: 1px solid black;
+}
+#bingo-board > div {
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checked::before {
+  content: "";
+  width: 12vmin;
+  height: 12vmin;
+  /* border-radius: 50%; */
+  /* border: 1.5vmin solid green; */
+  position: fixed;
+}
+.checked.water::before {
+  background: center / contain no-repeat url("assets/img/water.png");
+}
+.checked.earth::before {
+  background: center / contain no-repeat url("assets/img/earth.png");
+}
+.checked.fire::before {
+  background: center / contain no-repeat url("assets/img/fire.png");
+}
+.checked.air::before {
+  background: center / contain no-repeat url("assets/img/air.png");
+}
+
+#element-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.selectable {
+  width: 15vmin;
+  height: 15vmin;
+}
+.select-water {
+  background: center / contain no-repeat url("assets/img/water.png");
+}
+.select-earth {
+  background: center / contain no-repeat url("assets/img/earth.png");
+}
+.select-fire {
+  background: center / contain no-repeat url("assets/img/fire.png");
+}
+.select-air {
+  background: center / contain no-repeat url("assets/img/air.png");
+}
+.selected {
+  box-shadow: skyblue 0 0 2vmin 2vmin;
+}
