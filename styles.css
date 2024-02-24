@@ -38,7 +38,7 @@ body {
   height: 12vmin;
   /* border-radius: 50%; */
   /* border: 1.5vmin solid green; */
-  position: fixed;
+  position: absolute;
 }
 .checked.water::before {
   background: center / contain no-repeat url("assets/img/water.png");
