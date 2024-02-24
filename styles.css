@@ -76,5 +76,6 @@ body {
   background: center / contain no-repeat url("assets/img/air.png");
 }
 .selected {
-  box-shadow: skyblue 0 0 2vmin 2vmin;
+  box-shadow: skyblue 0 0 1.5vmin 1.5vmin;
+  border-color: skyblue !important;
 }

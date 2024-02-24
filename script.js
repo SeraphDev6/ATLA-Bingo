@@ -95,14 +95,17 @@ const checkWin = (i) => {
   const possibleWins = winConditions.filter((e) => e.includes(i));
   for (let idx = 0; idx < possibleWins.length; idx++) {
     if (
-      possibleWins[idx].every((x) => squares[x].classList.contains("checked"))
+      possibleWins[idx].every(
+        (x) =>
+          squares[x].classList.contains("checked") ||
+          squares[x].classList.contains("selected")
+      )
     ) {
       possibleWins[idx].forEach((j) => {
         squares[j].classList.remove("checked");
         squares[j].classList.add("selected");
       });
       elementDiv.innerHTML = "<h2>BINGO!! You have regained your HONOR!!!</h2>";
-      break;
     }
   }
 };
